@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddlxrubdb8xnn"
-path="res://.godot/imported/enviroment.png-64b0d24f1dce1ac00d9e823bf25485c7.ctex"
+uid="uid://cy2dnulyf540u"
+path="res://.godot/imported/buildings.png-25307f1c791c2eb192be0c4a9e9108e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/enviroment.png"
-dest_files=["res://.godot/imported/enviroment.png-64b0d24f1dce1ac00d9e823bf25485c7.ctex"]
+source_file="res://Assets/levels/buildings.png"
+dest_files=["res://.godot/imported/buildings.png-25307f1c791c2eb192be0c4a9e9108e9.ctex"]
 
 [params]
 

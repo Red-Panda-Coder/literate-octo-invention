@@ -13,7 +13,7 @@ public static class Logger
 			string timeStamp = $"[{dateTime:yyyy-MM-dd HH-mm-ss}]";
 			var callingMethod = new System.Diagnostics.StackTrace().GetFrame(2).GetMethod();
 			string logMessage = $"{timeStamp} [{level}] [{callingMethod.DeclaringType.Name}] [{callingMethod.Name}] ";
-			GD.PrintRich([logMessage, .. message]);
+			
 			
 			string color = "CYAN";
 

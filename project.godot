@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="New Game to Test C#"
+config/name="New Game to Test C Sharp"
 run/main_scene="uid://i4id5ox3assn"
 config/features=PackedStringArray("4.7", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
@@ -26,7 +26,7 @@ window/stretch/aspect="expand"
 
 [dotnet]
 
-project/assembly_name="New Game to Test C#"
+project/assembly_name="New Game to Test C Sharp"
 
 [physics]
 
