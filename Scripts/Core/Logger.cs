@@ -13,7 +13,7 @@ public static class Logger
 			string timeStamp = $"[{dateTime:yyyy-MM-dd HH-mm-ss}]";
 			var callingMethod = new System.Diagnostics.StackTrace().GetFrame(2).GetMethod();
 			string logMessage = $"{timeStamp} [{level}] [{callingMethod.DeclaringType.Name}] [{callingMethod.Name}] ";
-			
+			// Why was this here? It  causes 2 prints on terminal GD.PrintRich([logMessage, .. message]);
 			
 			string color = "CYAN";
 
