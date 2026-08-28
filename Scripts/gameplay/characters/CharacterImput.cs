@@ -4,8 +4,8 @@ using System;
 using System.Runtime.InteropServices.JavaScript;
 
 
-namespace Game.Gameplay
-{
+namespace Game.Gameplay;
+
 
 
 
@@ -22,4 +22,3 @@ namespace Game.Gameplay
 
     }
 
-}

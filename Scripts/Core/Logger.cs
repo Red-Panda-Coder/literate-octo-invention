@@ -2,8 +2,8 @@ using Godot;
 using System;
 
 
-namespace Game.Core
-{
+namespace Game.Core;
+
 public static class Logger
 {
 
@@ -59,4 +59,4 @@ public static class Logger
 			Log(LogLevel.ERROR, message);
 		}
 	}
-}	
+
