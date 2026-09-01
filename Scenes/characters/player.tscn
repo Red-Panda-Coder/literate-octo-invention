@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dglyr3w5rwg1f" path="res://Assets/characters/player.png" id="1_rd5lp"]
 [ext_resource type="Script" uid="uid://bylns3m67d6yc" path="res://Scripts/gameplay/characters/PlayerInput.cs" id="1_yh67s"]
+[ext_resource type="Script" uid="uid://bo0ax5nwvu4x0" path="res://Scripts/gameplay/characters/CharacterMovement.cs" id="2_5cv2o"]
+[ext_resource type="Script" uid="uid://dirxam5f4deve" path="res://Scripts/gameplay/characters/CharacterAnimation.cs" id="4_tg0mb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u1s8f"]
 size = Vector2(16.03125, 16.03125)
@@ -273,15 +275,27 @@ shape = SubResource("RectangleShape2D_u1s8f")
 
 [node name="Input" type="Node" parent="Collider" unique_id=1189356735]
 script = ExtResource("1_yh67s")
+HoldThreshold = null
+HoldTime = null
+Direction = null
+TargetPosition = null
 
-[node name="Movement" type="Node" parent="Collider" unique_id=1215111743]
+[node name="Movement" type="Node" parent="Collider" unique_id=1215111743 node_paths=PackedStringArray("Character", "CharacterInput")]
+script = ExtResource("2_5cv2o")
+Character = NodePath("../..")
+CharacterInput = NodePath("../Input")
+TargetPosition = null
+IsWalking = null
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Collider" unique_id=1914481940]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Collider" unique_id=1914481940 node_paths=PackedStringArray("CharacterInput", "CharacterMovement")]
 texture_filter = 1
 position = Vector2(0, -4)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_u1s8f")
 animation = &"idle_down"
+script = ExtResource("4_tg0mb")
+CharacterInput = NodePath("../Input")
+CharacterMovement = NodePath("../Movement")
 
 [node name="Camera2D" type="Camera2D" parent="Collider" unique_id=1324573854]
 zoom = Vector2(5, 5)

@@ -25,9 +25,14 @@ namespace Game.Gameplay
 			Core.Logger.Info("Loading Character Movement component ...");
 
 		}
+
+
 		public override void _Process(double delta)
 		{
+			
 		}	
+
+
 		public bool IsMoving()
 		{
 			return IsWalking;
@@ -48,6 +53,43 @@ namespace Game.Gameplay
 
 			
 		}
+		public void Walk(double delta)
+		{
+			if (IsWalking)
+			{
+				Character.Position = Character.Position.MoveToward(TargetPosition, (float)delta * Globals.Instance.GRID_SIZE * 4 );
+				if (Character.Position.DistanceTo(TargetPosition) <1f)
+				{
+					StopWalking();
+				}
+			}
+			else
+			{
+				//TO: Idle Animation
+			}
+		}	
+
+		public void StopWalking()
+		{
+			IsWalking = false;
+			SnapPositionToGrid();
+		}
+
+		public void Turn()
+		{
+			//TOODO: Turn Animation
+		}
+
+
+		public void SnapPositionToGrid()
+		{
+			Character.Position = new Vector2(
+				Mathf.Round(Character.Position.X / Globals.Instance.GRID_SIZE) * Globals.Instance.GRID_SIZE,
+				Mathf.Round(Character.Position.Y / Globals.Instance.GRID_SIZE) * Globals.Instance.GRID_SIZE
+			);
+		}
+
+
 
 
 
