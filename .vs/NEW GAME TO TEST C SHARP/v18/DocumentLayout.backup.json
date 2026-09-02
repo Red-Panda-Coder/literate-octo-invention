@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\temp\\literate-octo-invention\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{559F0158-8A3A-4985-9B1F-1CF8917645D3}|New Game to Test C Sharp.csproj|c:\\temp\\literate-octo-invention\\scripts\\utilities\\statemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{559F0158-8A3A-4985-9B1F-1CF8917645D3}|New Game to Test C Sharp.csproj|solutionrelative:scripts\\utilities\\statemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{559F0158-8A3A-4985-9B1F-1CF8917645D3}|New Game to Test C Sharp.csproj|c:\\temp\\literate-octo-invention\\scripts\\gameplay\\characters\\charactermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{559F0158-8A3A-4985-9B1F-1CF8917645D3}|New Game to Test C Sharp.csproj|solutionrelative:scripts\\gameplay\\characters\\charactermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{559F0158-8A3A-4985-9B1F-1CF8917645D3}|New Game to Test C Sharp.csproj|c:\\temp\\literate-octo-invention\\scripts\\gameplay\\characters\\playerinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{559F0158-8A3A-4985-9B1F-1CF8917645D3}|New Game to Test C Sharp.csproj|solutionrelative:scripts\\gameplay\\characters\\playerinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,15 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "StateMachine.cs",
+              "DocumentMoniker": "C:\\temp\\literate-octo-invention\\Scripts\\utilities\\StateMachine.cs",
+              "RelativeDocumentMoniker": "Scripts\\utilities\\StateMachine.cs",
+              "ToolTip": "C:\\temp\\literate-octo-invention\\Scripts\\utilities\\StateMachine.cs",
+              "RelativeToolTip": "Scripts\\utilities\\StateMachine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-02T19:54:44.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CharacterMovement.cs",
+              "DocumentMoniker": "C:\\temp\\literate-octo-invention\\Scripts\\gameplay\\characters\\CharacterMovement.cs",
+              "RelativeDocumentMoniker": "Scripts\\gameplay\\characters\\CharacterMovement.cs",
+              "ToolTip": "C:\\temp\\literate-octo-invention\\Scripts\\gameplay\\characters\\CharacterMovement.cs",
+              "RelativeToolTip": "Scripts\\gameplay\\characters\\CharacterMovement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-27T18:49:56.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "PlayerInput.cs",
               "DocumentMoniker": "C:\\temp\\literate-octo-invention\\Scripts\\gameplay\\characters\\PlayerInput.cs",
               "RelativeDocumentMoniker": "Scripts\\gameplay\\characters\\PlayerInput.cs",
               "ToolTip": "C:\\temp\\literate-octo-invention\\Scripts\\gameplay\\characters\\PlayerInput.cs",
               "RelativeToolTip": "Scripts\\gameplay\\characters\\PlayerInput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-19T21:11:53.668Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-19T21:11:53.668Z"
             }
           ]
         }

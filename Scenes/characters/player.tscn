@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bylns3m67d6yc" path="res://Scripts/gameplay/characters/PlayerInput.cs" id="1_yh67s"]
 [ext_resource type="Script" uid="uid://bo0ax5nwvu4x0" path="res://Scripts/gameplay/characters/CharacterMovement.cs" id="2_5cv2o"]
 [ext_resource type="Script" uid="uid://dirxam5f4deve" path="res://Scripts/gameplay/characters/CharacterAnimation.cs" id="4_tg0mb"]
+[ext_resource type="Script" uid="uid://dg4pb6hcc576n" path="res://Scripts/utilities/StateMachine.cs" id="5_kvnrr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u1s8f"]
 size = Vector2(16.03125, 16.03125)
@@ -296,6 +297,7 @@ animation = &"idle_down"
 script = ExtResource("4_tg0mb")
 CharacterInput = NodePath("../Input")
 CharacterMovement = NodePath("../Movement")
+ECharacterAnimation = null
 
 [node name="Camera2D" type="Camera2D" parent="Collider" unique_id=1324573854]
 zoom = Vector2(5, 5)
@@ -306,5 +308,6 @@ target_position = Vector2(0, 16)
 collide_with_areas = true
 
 [node name="StateMachine" type="Node" parent="." unique_id=873673756]
+script = ExtResource("5_kvnrr")
 
 [node name="Roam" type="Node" parent="StateMachine" unique_id=388268350]

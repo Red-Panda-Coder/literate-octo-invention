@@ -8,7 +8,7 @@ namespace Game.Gameplay
 	
 	public partial class CharacterMovement : Node
 	{
-		[Signal] public delegate void AnimationEventHandler();	
+		[Signal] public delegate void AnimationEventHandler(string animationType);	
 		
 		[ExportCategory("Nodes")]
 		[Export] public Node2D Character;
@@ -22,6 +22,9 @@ namespace Game.Gameplay
 			//This was not needed in tutorial
 		public override void _Ready()
 		{
+			CharacterInput.Walk += StartWalking;
+			CharacterInput.Turn += Turn;
+
 			Core.Logger.Info("Loading Character Movement component ...");
 
 		}
@@ -29,7 +32,8 @@ namespace Game.Gameplay
 
 		public override void _Process(double delta)
 		{
-			
+
+			Walk(delta);
 		}	
 
 
@@ -41,15 +45,12 @@ namespace Game.Gameplay
 		{
 			if (!IsMoving())
 			{
-				//TODO Walk animation needs to be added
+				EmitSignal(SignalName.Animation, "walk");
 				TargetPosition = Character.Position + CharacterInput.Direction * Globals.Instance.GRID_SIZE;
 				Core.Logger.Info($"Character is moving from {Character.Position} to {TargetPosition}");
 				IsWalking = true;
 			}
-			else
-			{
-				Core.Logger.Warning("Character is already moving, cannot start walking.");
-			}
+			
 
 			
 		}
@@ -65,7 +66,7 @@ namespace Game.Gameplay
 			}
 			else
 			{
-				//TO: Idle Animation
+				EmitSignal(SignalName.Animation, "idle");
 			}
 		}	
 
@@ -77,7 +78,7 @@ namespace Game.Gameplay
 
 		public void Turn()
 		{
-			//TOODO: Turn Animation
+			EmitSignal(SignalName.Animation, "turn");
 		}
 
 
