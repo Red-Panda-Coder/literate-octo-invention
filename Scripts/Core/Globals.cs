@@ -1,9 +1,9 @@
 using Godot;
 using System;
 
-namespace Game.Core
+namespace Game.Core;
 
-{
+
 	public partial class Globals : Node
 	{
 		public static Globals Instance { get; private set; }
@@ -22,4 +22,4 @@ namespace Game.Core
 			Logger.Error("Loading Globals ...");
 		}
 	}
-}
+

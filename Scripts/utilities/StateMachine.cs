@@ -12,9 +12,41 @@ public partial class StateMachine : Node
 
 	public override void _Ready()
 	{
+		foreach (Node child in GetChildren())
+		{
+			if (child is State state)
+			{
+				state.StateOwner = Customer;
+				state.SetProcess(false);
+			}
+		}
 		
 	}
 	
+
+	public string GetCurrentStateName()
+	{
+		return CurrentState.Name.ToString();
+	}
+
+	public void ChangeState(State newState)
+	{
+		
+		
+			CurrentState?.ExitState();
+			CurrentState = newState;
+			CurrentState?.EnterState();
+
+			foreach (Node child in GetChildren())
+			{
+				if (child is State state)
+				{
+					state.SetProcess(child == CurrentState);
+				}
+			}
+		
+
+	}
 
 
 }

@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://dvvonm3t508q7"]
 
 [ext_resource type="Texture2D" uid="uid://dglyr3w5rwg1f" path="res://Assets/characters/player.png" id="1_rd5lp"]
+[ext_resource type="Script" uid="uid://djtbt02twm2dt" path="res://Scripts/gameplay/characters/Player.cs" id="1_twm3q"]
 [ext_resource type="Script" uid="uid://bylns3m67d6yc" path="res://Scripts/gameplay/characters/PlayerInput.cs" id="1_yh67s"]
 [ext_resource type="Script" uid="uid://bo0ax5nwvu4x0" path="res://Scripts/gameplay/characters/CharacterMovement.cs" id="2_5cv2o"]
 [ext_resource type="Script" uid="uid://dirxam5f4deve" path="res://Scripts/gameplay/characters/CharacterAnimation.cs" id="4_tg0mb"]
 [ext_resource type="Script" uid="uid://dg4pb6hcc576n" path="res://Scripts/utilities/StateMachine.cs" id="5_kvnrr"]
+[ext_resource type="Script" uid="uid://cyy8a6nmvhlxl" path="res://Scripts/gameplay/characters/states/PlayerRoamState.cs" id="6_0r5da"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u1s8f"]
 size = Vector2(16.03125, 16.03125)
@@ -268,7 +270,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="CharacterBody2D" unique_id=1346292279]
+[node name="Player" type="CharacterBody2D" unique_id=1346292279 node_paths=PackedStringArray("StateMachine")]
+script = ExtResource("1_twm3q")
+StateMachine = NodePath("StateMachine")
 
 [node name="Collider" type="CollisionShape2D" parent="." unique_id=892401170]
 position = Vector2(8, 8)
@@ -307,7 +311,11 @@ position = Vector2(8, 8)
 target_position = Vector2(0, 16)
 collide_with_areas = true
 
-[node name="StateMachine" type="Node" parent="." unique_id=873673756]
+[node name="StateMachine" type="Node" parent="." unique_id=873673756 node_paths=PackedStringArray("Customer")]
 script = ExtResource("5_kvnrr")
+Customer = NodePath("..")
 
-[node name="Roam" type="Node" parent="StateMachine" unique_id=388268350]
+[node name="Roam" type="Node" parent="StateMachine" unique_id=388268350 node_paths=PackedStringArray("PlayerInput", "StateOwner")]
+script = ExtResource("6_0r5da")
+PlayerInput = NodePath("../../Collider/Input")
+StateOwner = NodePath("../..")
